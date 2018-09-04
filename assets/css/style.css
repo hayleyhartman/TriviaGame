@@ -1,5 +1,15 @@
+body {
+    background-image: url("../images/what-the-hex.png")
+}
+
 #quiz {
     visibility: visible;
+    padding: 40px, 5px;
+}
+
+#docTimer {
+    text-align: center;
+    font-size: 30px;
 }
 
 #afterSubmit {
