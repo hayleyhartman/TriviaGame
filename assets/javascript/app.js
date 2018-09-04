@@ -11,7 +11,6 @@ var timeLeft = 30;
 
 var timeoutFunc = setInterval(function(){ 
     timeLeft -= 1;
-    console.log(timeLeft);
     $("#docTimer").text(timeLeft);
     if (timeLeft <= 0) {
         clearInterval(timeoutFunc)
@@ -52,90 +51,9 @@ function check () {
 
 $("#button").click(function() {
     check()
-    console.log(correct)
 });
 
 
 
 });
 
-
-
-//create a quiz that
-//-displays quiz in form-style
-//-has a timer
-//when user clicks "submit" the quiz checks for right answers and returns message of how many they got right
-//OR if the quiz times out, it checks for right answers and returns message of how many they got right
-
-
-/*
-
-var selectCheck = function () {
-    if ($("#mc").click()) {
-        $("#mc") === true;
-    }
-}*/
-/*
-var check = function () {
-
-document.getElementById("afterSubmit").style.visibility = "visible";
-document.getElementById("quiz").style.visibility = "hidden";
-
-
-
-if ($(".correct1")) {
-    correct++
-}
-if ($(".correct2")) {
-    correct++
-}
-if ($(".correct3")) {
-    correct++
-} 
-
-document.getElementById("numberCorrect").innerHTML = "You got " + correct + " correct!"
-}
-
-$('#button').click(function() {
-    check()
-    console.log(correct)
-}) 
-
-
-//google how to find the value of checked radio button js
-
-function buildQuiz () {
-    var output = []
-
-    questions.forEach(
-        (currentQuestion, questionNumber) => {
-            var answers = []
-            for (var i = 0; i < currentQuestion.answers.length; i++) {
-                answers.push(
-                    <label>
-                        <input type="radio" name="question${questionNumber}" value ="${letter}"></input>
-                       ${letter} : 
-                       ${currentQuestion.answers[letter]}
-                    </label>
-                )
-            }
-
-            output.push (
-                <div class="question">${currentQuestion.question}</div>
-                <div class="answers">{answers.join('')}</div>
-            )
-        }
-    )
-    quiz.innerHTML = output.join('')
-}
-
-function showResults () {} 
-
-buildQuiz ()
-
-submitButton.addEventListener("click", showResults())
-
-
-
-
-}) */
